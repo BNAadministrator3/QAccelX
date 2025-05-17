@@ -41,8 +41,8 @@ Multiple models can achieve significant acceleration with negligible or minimal 
 | Optimized Accuracy (%) | 79.3     | 79.8      | 72.5        | 76.7  | 80.7      |
 | Original Time (ms)    | 31.34    | 41.56     | 3.43        | 190.41 | 608.9    |
 | Optimized Time (ms)   | 16.78    | 12.65     | 3.01        | 64.47  | 121.55   |
-| Inference Speedup    | 86.77%   | 228.54%   | 13.95%      | 195.35% | 400.95%  |
-| Accuracy Loss        | 1%       | 1%        | 1%          | 0%     | 1%        |
+| Inference Speedup (%)   | 86.77   | 228.54   | 13.95      | 195.35 | 400.95  |
+| Accuracy Loss (%)       | 1       | 1        | 1          | 0     | 1        |
 
 ## Some observations & tips
 - For Swin Transformer and TNT models, relying solely on SmoothQuant is insufficient for accuracy recovery after quantization. The --accuracy_control flag must also be enabled as well. For instance, the ablation study of TNT is like:
