@@ -97,12 +97,12 @@ def main():
         dummy_input = torch.randn(1, 3, 224, 224)
     torch_model.eval()
 
-    if not ACC_CONTROL:
-        val_dataset = datasets.ImageFolder(
+    val_dataset = datasets.ImageFolder(
             root=os.path.join(dataset_path , "val"),
             transform=val_transform,
         )
-        val_data_loader = torch.utils.data.DataLoader(val_dataset, batch_size=batch_size)
+    val_data_loader = torch.utils.data.DataLoader(val_dataset, batch_size=batch_size)
+    if not ACC_CONTROL:
         subset_size = 300 // batch_size
         calibration_dataset = nncf.Dataset(val_data_loader, partial(transform_fn, device=device))
         if WEIGHT_ONLY:
