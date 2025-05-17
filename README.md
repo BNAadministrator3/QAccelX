@@ -29,7 +29,7 @@ Augements descriptions:
 | `--weight_only` | `bool` | `False` | True, False | Enables weight-only compression. When `True`, only model weights are quantized (activations remain unchanged). |
 | `--dataset_path` | `str` | `/data/imagenet` | True, False | Path to the dataset directory. Default is `/data/imagenet`. |
 | `--batch_size` | `int` | `128` | True, False | Batch size for inference/data loading. Default is `128`. |
-| `--baseline_precision` | `str` | `fp32` | `fp32`, `fp16` | Baseline precision for model inference. Options: `fp32` (default) or `fp16`. **Note both FP32 and FP16 results are displayed when `fp32` is used.** Note 'fp16' option is currently unstable. |
+| `--baseline_precision` | `str` | `fp32` | `fp32`, `fp16` | Baseline precision for model inference. Options: `fp32` (default) or `fp16`. **Note both FP32 and FP16 results are displayed when `fp32` is used.** Note 'fp16' option is currently unfeasible. |
 | `--debug` | `bool` | `False` | True, False | Enables debug mode for verbose logging and additional checks. Set to `True` for detailed debugging. |
 
 ## Results
